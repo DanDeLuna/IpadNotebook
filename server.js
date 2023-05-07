@@ -26,9 +26,9 @@ app.get('/', (req, res) => {
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, './public/notes.html'));
 });
-
-function createNewNote(body, notasArr) {
-    const newNote = body;
+//hacernuveNota y nuveaNota y notasArr
+function hacernuveNota(body, notasArr) {
+    const nuveaNota = body;
     if (!Array.isArray(notasArr))
         notasArr = [];
     
@@ -38,17 +38,17 @@ function createNewNote(body, notasArr) {
     body.id = notasArr[0];
     notasArr[0]++;
 
-    notasArr.push(newNote);
+    notasArr.push(nuveaNota);
     fs.writeFileSync(
         path.join(__dirname, './db/db.json'),
         JSON.stringify(notasArr, null, 2)
     );
-    return newNote;
+    return nuveaNota;
 }
 
 app.post('/api/notes', (req, res) => {
-    const newNote = createNewNote(req.body, todaNotas);
-    res.json(newNote);
+    const nuveaNota = hacernuveNota(req.body, todaNotas);
+    res.json(nuveaNota);
 });
 
 function deleteNote(id, notasArr) {
@@ -66,12 +66,4 @@ function deleteNote(id, notasArr) {
         }
     }
 }
-
-app.delete('/api/notes/:id', (req, res) => {
-    deleteNote(req.params.id, todaNotas);
-    res.json(true);
-});
-
-app.listen(PORT, () => {
-    console.log(`API server now on port ${PORT}!`);
-});
+   
