@@ -50,8 +50,8 @@ app.post('/api/notes', (req, res) => {
     const nuveaNota = hacernuveNota(req.body, todaNotas);
     res.json(nuveaNota);
 });
-
-function deleteNote(id, notasArr) {
+//borraNota
+function borraNota(id, notasArr) {
     for (let i = 0; i < notasArr.length; i++) {
         let note = notasArr[i];
 
@@ -66,4 +66,11 @@ function deleteNote(id, notasArr) {
         }
     }
 }
-   
+app.delete('/api/notes/:id', (req, res) => {
+    borraNota(req.params.id, todaNotas);
+    res.json(true);
+});
+
+app.listen(PORT, () => {
+    console.log(`API server on port ${PORT}!`);
+});
