@@ -1,7 +1,9 @@
 # IpadNotebook
 
 ## description 
-This is app that allows you to make notes and delete notes. Super simple to use 
+This is app that allows you to make notes and delete notes. Super simple to use helping keeping organized. 
+
+
 -Heroku failed to deploy https://boiling-plains-64433.herokuapp.com/ apps crashes
 ## User Story
 
