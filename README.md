@@ -16,6 +16,12 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 ## Install 
 Clone this code and run on machine
 
+## Tools needed
+-Node
+-Express
+## License
+MIT 
+
 ## credits
 Myself
 
