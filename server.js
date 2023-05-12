@@ -4,7 +4,7 @@ const path = require('path');
 const PORT = process.env.port || 3001;
 const app = express();
 const fs = require('fs');
-const todaNotas = require('./Develop/db/db.json');
+const todaNotas = require('./db/db.json');
 
 //express app mentions
 app.use(express.static('public'));
@@ -70,7 +70,7 @@ app.delete('/api/notes/:id', (req, res) => {
     borraNota(req.params.id, todaNotas);
     res.json(true);
 });
-
+  
 app.listen(PORT, () => {
     console.log(`API server on port ${PORT}!`);
 });
