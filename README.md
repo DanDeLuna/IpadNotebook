@@ -3,8 +3,14 @@
 ## description 
 This is app that allows you to make notes and delete notes. Super simple to use helping keeping organized. 
 
+![screenshot](./Assets/MyScreenshot%202023-05-14%20134105.png)
+![screenshot](/Assets/MyScreenshot%202023-05-14%20134157.png)
+## Demo
+Link to video https://drive.google.com/file/d/1mhrdltV3-Tmyxw7ob0y4lB0sgPQn8wfo/view 
 
--Heroku failed to deploy https://boiling-plains-64433.herokuapp.com/ apps crashes
+
+-Link to app  
+https://stark-chamber-27241.herokuapp.com/
 ## User Story
 
 ```
